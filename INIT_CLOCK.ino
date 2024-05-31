@@ -1,4 +1,5 @@
 #include <DS3231.h>
+#include <Wire.h>
 
 void setup() {
   DS3231 RTC;
@@ -11,7 +12,7 @@ void setup() {
   RTC.setMonth(1);
   RTC.setYear(20);
   RTC.enable32kHz(true);
-  RTC.enableOscillator(true,false,0);
+  RTC.enableOscillator(false,false,0);
 }
 
 void loop() {
